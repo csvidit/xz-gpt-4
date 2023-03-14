@@ -24,18 +24,17 @@ export default function Home() {
             animate={{ opacity: 1, translateY: 0 }}
             initial={{ opacity: 0, translateY: 0 }}
             transition={{ type: "spring" }}
-            className="font-semibold text-4xl lg:text-6xl"
+            className="flex flex-col lg:flex-row justify-center items-center lg:space-x-1 font-semibold text-4xl lg:text-6xl"
           >
-            XZAYVIAN <span className="font-normal">Visual GPT</span>
+            <p>XZAYVIAN</p>
+            <p className="font-normal">Visual GPT</p>
           </motion.h1>
           <motion.div
             animate={{ opacity: 1, translateY: 0 }}
             initial={{ opacity: 0, translateY: 0 }}
             transition={{
-              // duration: 0.4,
               delay: 0.4,
               type: "spring",
-              // ease: "backInOut",
             }}
             className="flex flex-row space-x-2 items-center font-sans text-xl: lg:text-2xl mt-10 justify-center"
           >
@@ -43,12 +42,6 @@ export default function Home() {
               <p>coming soon</p>
             </div>
             <BsDot />
-            {/* <Image
-                width={36}
-                height={36}
-                alt="Smile Emoji"
-                src="/smile.svg"
-              /> */}
             <p>invite only*</p>
           </motion.div>
           <motion.p
