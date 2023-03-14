@@ -22,37 +22,43 @@ export default function Home() {
         <MainContent>
           <motion.h1
             animate={{ opacity: 1, translateY: 0 }}
-            initial={{ opacity: 0, translateY: 80 }}
-            transition={{ duration: 0.4, type: "tween", ease: "backInOut" }}
+            initial={{ opacity: 0, translateY: 0 }}
+            transition={{ type: "spring" }}
             className="font-semibold text-4xl lg:text-6xl"
           >
             XZAYVIAN <span className="font-normal">Visual GPT</span>
           </motion.h1>
           <motion.div
             animate={{ opacity: 1, translateY: 0 }}
-            initial={{ opacity: 0, translateY: 80 }}
+            initial={{ opacity: 0, translateY: 0 }}
             transition={{
-              duration: 0.4,
+              // duration: 0.4,
               delay: 0.4,
-              type: "tween",
-              ease: "backInOut",
+              type: "spring",
+              // ease: "backInOut",
             }}
             className="flex flex-row space-x-2 items-center font-sans text-xl: lg:text-2xl mt-10 justify-center"
           >
             <div className="flex flex-row items-center space-x-1">
-              
               <p>coming soon</p>
             </div>
-            {/* <BsDot /> */}
-            <Image
+            <BsDot />
+            {/* <Image
                 width={36}
                 height={36}
                 alt="Smile Emoji"
                 src="/smile.svg"
-              />
+              /> */}
             <p>invite only*</p>
           </motion.div>
-          {/* <motion.p animate={{opacity: 1}} initial={{opacity: 0}} transition={{delay: 0.6}} className='absolute bottom-20 text-xs text-center font-sans'>*bring your own key</motion.p> */}
+          <motion.p
+            animate={{ opacity: 1 }}
+            initial={{ opacity: 0 }}
+            transition={{ delay: 0.6 }}
+            className="absolute bottom-20 text-xs text-center font-sans"
+          >
+            *bring your own key
+          </motion.p>
         </MainContent>
       </MainContainer>
     </>
