@@ -44,7 +44,7 @@ export default function Home() {
             animate={{ opacity: 1, translateY: 0 }}
             initial={{ opacity: 0, translateY: 0 }}
             transition={{ type: "spring" }}
-            className="flex flex-col lg:flex-row justify-center items-center lg:space-x-1 font-semibold text-4xl lg:text-6xl"
+            className="flex flex-col lg:flex-row justify-center items-center lg:space-x-2 font-semibold text-4xl lg:text-6xl"
           >
             <p>XZAYVIAN</p>
             <p className="font-normal">Visual GPT</p>
