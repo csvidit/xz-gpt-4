@@ -22,7 +22,7 @@ const Button = (props: {
 
   if (props.style === "outline-white") {
     classes =
-      "flex flex-row space-x-2 items-center p-4 text-white border-2 border-white hover:bg-white hover:text-black";
+      "flex flex-row space-x-2 items-center p-2 lg:p-4 text-white border-2 border-white hover:bg-white hover:text-black";
   }
 
   return (
