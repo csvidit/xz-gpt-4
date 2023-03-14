@@ -1,9 +1,13 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import { Inter } from "next/font/google";
+import styles from "@/styles/Home.module.css";
+import MainContainer from "@/components/MainContainer";
+import MainContent from "@/components/MainContent";
+import { BsDot } from "react-icons/bs";
+import { motion } from "framer-motion";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -14,110 +18,43 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
-          </div>
-        </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-          <div className={styles.thirteen}>
+      <MainContainer>
+        <MainContent>
+          <motion.h1
+            animate={{ opacity: 1, translateY: 0 }}
+            initial={{ opacity: 0, translateY: 80 }}
+            transition={{ duration: 0.4, type: "tween", ease: "backInOut" }}
+            className="font-semibold text-4xl lg:text-6xl"
+          >
+            XZAYVIAN <span className="font-normal">Visual GPT</span>
+          </motion.h1>
+          <motion.div
+            animate={{ opacity: 1, translateY: 0 }}
+            initial={{ opacity: 0, translateY: 80 }}
+            transition={{
+              duration: 0.4,
+              delay: 0.4,
+              type: "tween",
+              ease: "backInOut",
+            }}
+            className="flex flex-row space-x-2 items-center font-sans text-xl: lg:text-2xl mt-10 justify-center"
+          >
+            <div className="flex flex-row items-center space-x-1">
+              
+              <p>coming soon</p>
+            </div>
+            {/* <BsDot /> */}
             <Image
-              src="/thirteen.svg"
-              alt="13"
-              width={40}
-              height={31}
-              priority
-            />
-          </div>
-        </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className={inter.className}>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p className={inter.className}>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+                width={36}
+                height={36}
+                alt="Smile Emoji"
+                src="/smile.svg"
+              />
+            <p>invite only*</p>
+          </motion.div>
+          {/* <motion.p animate={{opacity: 1}} initial={{opacity: 0}} transition={{delay: 0.6}} className='absolute bottom-20 text-xs text-center font-sans'>*bring your own key</motion.p> */}
+        </MainContent>
+      </MainContainer>
     </>
-  )
+  );
 }
