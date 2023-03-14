@@ -7,6 +7,7 @@ import MainContent from "@/components/MainContent";
 import { BsDot } from "react-icons/bs";
 import { motion } from "framer-motion";
 import Footer from "@/components/Footer";
+import Button from "@/components/Button";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +15,7 @@ export default function Home() {
   return (
     <>
       <Head>
-      <title>Xzayvian Visual GPT</title>
+        <title>Xzayvian Visual GPT</title>
         <meta
           name="description"
           content="The new Xzayvian chatbot based on OpenAI GPT-4, a Vidit Khandelwal Project"
@@ -64,6 +65,25 @@ export default function Home() {
             <BsDot />
             <p>invite only*</p>
           </motion.div>
+          <motion.div
+            className="mt-10"
+            animate={{ opacity: 1, translateY: 0 }}
+            initial={{ opacity: 0, translateY: 0 }}
+            transition={{
+              delay: 0.4,
+              type: "spring",
+            }}
+          >
+            <Button
+              style="outline-white"
+              type="intra"
+              href="https://xz.viditkhandelwal.com"
+              target="_blank"
+            >
+              Go to Xzayvian GPT
+            </Button>
+          </motion.div>
+
           <motion.p
             animate={{ opacity: 1 }}
             initial={{ opacity: 0 }}
@@ -73,7 +93,7 @@ export default function Home() {
             *bring your own key
           </motion.p>
         </MainContent>
-        <Footer/>
+        <Footer />
       </MainContainer>
     </>
   );
