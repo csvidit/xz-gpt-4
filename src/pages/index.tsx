@@ -6,6 +6,7 @@ import MainContainer from "@/components/MainContainer";
 import MainContent from "@/components/MainContent";
 import { BsDot } from "react-icons/bs";
 import { motion } from "framer-motion";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,6 +54,7 @@ export default function Home() {
             *bring your own key
           </motion.p>
         </MainContent>
+        <Footer/>
       </MainContainer>
     </>
   );
