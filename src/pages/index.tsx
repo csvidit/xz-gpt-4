@@ -50,6 +50,16 @@ export default function Home() {
             <p>XZAYVIAN</p>
             <p className="font-normal">Visual GPT</p>
           </motion.h1>
+          {/* <motion.div
+            animate={{ opacity: 1, translateY: 0 }}
+            initial={{ opacity: 0, translateY: 0 }}
+            transition={{
+              delay: 0.4,
+              type: "spring",
+            }}
+          >
+            <p className="font-light text-xl lg:text-2xl mt-5">Based on OpenAI GPT-4 multi-modal LLM</p>
+          </motion.div> */}
           <motion.div
             animate={{ opacity: 1, translateY: 0 }}
             initial={{ opacity: 0, translateY: 0 }}
